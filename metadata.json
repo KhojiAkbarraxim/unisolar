@@ -1,0 +1,6 @@
+{
+  "name": "UNISOLAR Corporate Website",
+  "description": "The official multi-language corporate website for UNISOLAR LLC, a solar power plant developer and operator in Uzbekistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

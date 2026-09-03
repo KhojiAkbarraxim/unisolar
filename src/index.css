@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0f172a;
+  --color-brand-blue-dark: #020617;
+  --color-brand-blue-light: #0d9488;
+  --color-brand-orange: #0d9488;
+  --color-brand-orange-dark: #0f766e;
+  --color-brand-orange-light: #2dd4bf;
+  
+  --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Crisp Geometric Balance radiuses */
+  --radius-3xl: 4px;
+  --radius-2xl: 2px;
+  --radius-xl: 1px;
+  --radius-lg: 0px;
+}
+
+/* Base styling updates */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #fcfdfd;
+  color: #0c1c24;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Flowchart animation lines */
+@keyframes flow {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-flow {
+  stroke-dasharray: 8, 4;
+  animation: flow 1s linear infinite;
+}

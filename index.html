@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return currentFetch;
+            },
+            set: function(val) {
+              currentFetch = val;
+            }
+          });
+        } catch (e) {
+          console.warn("Could not redefine window.fetch", e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNISOLAR Corporate Website</title>
+    <meta name="description" content="The official multi-language corporate website for UNISOLAR LLC, a solar power plant developer and operator in Uzbekistan." />
+    <meta property="og:title" content="UNISOLAR Corporate Website" />
+    <meta property="og:description" content="The official multi-language corporate website for UNISOLAR LLC, a solar power plant developer and operator in Uzbekistan." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
