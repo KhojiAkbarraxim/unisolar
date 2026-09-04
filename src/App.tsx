@@ -6,7 +6,6 @@ import Partners from './components/Partners';
 import ForInvestors from './components/ForInvestors';
 import Services from './components/Services';
 import Solar3DStudio from './components/Solar3DStudio';
-import News from './components/News';
 import Contact from './components/Contact';
 import InvestorZone from './components/InvestorZone';
 import { translations } from './translations';
@@ -27,27 +26,34 @@ export default function App() {
     document.documentElement.lang = lang.toLowerCase();
   }, [lang]);
 
-  // Intersection observer to automatically highlight active navbar item on scroll
+  // Optimized scroll listener using requestAnimationFrame to prevent layout thrashing
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'partners', 'investors', 'solar3d', 'services', 'news', 'contact', 'investor-zone'];
-      const scrollPosition = window.scrollY + 250;
+    let ticking = false;
+    const sections = ['home', 'about', 'partners', 'investors', 'solar3d', 'services', 'contact', 'investor-zone'];
 
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section === 'investor-zone' ? 'investors' : section);
-            break;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY + 250;
+          for (const section of sections) {
+            const el = document.getElementById(section);
+            if (el) {
+              const top = el.offsetTop;
+              const height = el.offsetHeight;
+              if (scrollPosition >= top && scrollPosition < top + height) {
+                setActiveSection(section === 'investor-zone' ? 'investors' : section);
+                break;
+              }
+            }
           }
-        }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   // Handler to scroll smoothly to a specific section
@@ -105,10 +111,7 @@ export default function App() {
         {/* 05 · Xizmatlar */}
         <Services t={t} onConsultationClick={handleConsultationRequest} />
 
-        {/* 06 · Yangiliklar */}
-        <News t={t} />
-
-        {/* 07 · Bog'lanish / Kontakt */}
+        {/* 06 · Bog'lanish / Kontakt */}
         <Contact t={t} consultationTrigger={consultationTrigger} />
 
         {/* 08 · Investor Zonasi portali */}
@@ -144,48 +147,24 @@ export default function App() {
             <div className="md:col-span-3 space-y-3">
               <h4 className="text-xs font-mono text-white font-bold uppercase tracking-wider">{t.footer.navTitle}</h4>
               <ul className="space-y-1.5 text-xs">
-                <li>
-                  <button onClick={() => handleSectionScroll('home')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.home}
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleSectionScroll('about')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.about}
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleSectionScroll('partners')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.partners}
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleSectionScroll('investors')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.investors}
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleSectionScroll('solar3d')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.solar3d}
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleSectionScroll('services')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.services}
-                  </button>
-                </li>
-                {t.nav.news && (
-                  <li>
-                    <button onClick={() => handleSectionScroll('news')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                      {t.nav.news}
+                {[
+                  { id: 'home', label: t.nav.home },
+                  { id: 'about', label: t.nav.about },
+                  { id: 'partners', label: t.nav.partners },
+                  { id: 'investors', label: t.nav.investors },
+                  { id: 'solar3d', label: t.nav.solar3d },
+                  { id: 'services', label: t.nav.services },
+                  { id: 'contact', label: t.nav.contact },
+                ].map(item => (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => handleSectionScroll(item.id)}
+                      className="hover:text-brand-orange transition-colors cursor-pointer text-left"
+                    >
+                      {item.label}
                     </button>
                   </li>
-                )}
-                <li>
-                  <button onClick={() => handleSectionScroll('contact')} className="hover:text-brand-orange transition-colors cursor-pointer text-left">
-                    {t.nav.contact}
-                  </button>
-                </li>
+                ))}
               </ul>
             </div>
 

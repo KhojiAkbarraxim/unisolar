@@ -8,7 +8,6 @@ export const jaTranslation: Translation = {
     investors: "投資家様へ",
     solar3d: "3Dパネル",
     services: "事業内容",
-    news: "ニュース",
     contact: "お問い合わせ",
     investorZone: "投資家専用ポータル"
   },
@@ -107,6 +106,35 @@ export const jaTranslation: Translation = {
       { label: "年間想定発電量", value: "約420万〜480万 kWh" },
       { label: "保守管理", value: "UNISOLARが全額負担（ロボット洗浄・定期点検）" },
       { label: "契約終了時", value: "発電設備一式を顧客企業へ無償譲渡" }
+    ],
+    teamBadge: "01.7 // 経営・技術チーム",
+    teamTitle: "経営陣およびコアメンバー",
+    teamDesc: "再生可能エネルギー、法務監査、EPCプロジェクト管理の第一線で活躍する専門家チーム。",
+    teamMembers: [
+      {
+        name: "Bunyodbek Ibragimov",
+        role: "創業者兼ゼネラルパートナー",
+        image: "/team/Bunyodbek_Ibragiimov_Founder_General_Partner.jpg",
+        fallbackImage: "/team/bunyodbek.jpg"
+      },
+      {
+        name: "Anvar Omonboyev",
+        role: "ディレクター / 代表責任者",
+        image: "/team/Anvar_Omonboyev_Director.jpg",
+        fallbackImage: "/team/anvar.jpg"
+      },
+      {
+        name: "Vafo Ortiqov",
+        role: "プロジェクトマネージャー",
+        image: "/team/Vafo_Ortriqov_Projectr_Manager.jpg",
+        fallbackImage: "/team/vafo.jpg"
+      },
+      {
+        name: "Said Raximov",
+        role: "法務アドバイザー",
+        image: "/team/Said_Raximov_Legal_Advisor.JPG",
+        fallbackImage: "/team/said.jpg"
+      }
     ]
   },
   partners: {
@@ -181,18 +209,35 @@ export const jaTranslation: Translation = {
       { title: "高い投資透明性", desc: "専用の投資家ダッシュボードで、毎分の発電データと収益実績をリアルタイム確認。" },
       { title: "実物資産の法的所有権", desc: "投資家様は設置された太陽光パネルや設備現物の法的所有権を保持します。" }
     ],
-    sampleBadge: "標準案件モデル",
-    exampleTitle: "モデル収支（3.0 MWメガソーラー案件）",
-    exampleDesc: "標準的な3MW案件の試算例です。詳細な財務モデルおよび監査資料は投資家専用ポータルで公開しています。",
+    sampleBadge: "財務モデル · FINANCIAL MODEL",
+    exampleTitle: "12年間キャッシュフロー — 3 MW（ベースケース: 4.2M kWh）",
+    exampleDesc: "初年度EPC保証発電量4,200,000 kWh、初期売電単価880 UZS/kWh（PPA第5.1条に基づく年率10%スライド）。",
     sampleCapacityLabel: "設備容量",
     sampleCapacityVal: "3.0 MWp (TOPCon)",
-    sampleProductionLabel: "年間想定発電量",
-    sampleProductionVal: "4,800,000 kWh",
-    sampleCapexLabel: "概算建設費用（CAPEX）",
-    sampleCapexVal: "約2,250,000 USD",
-    sampleRevenueLabel: "年間想定配当額（投資家シェア80%）",
-    sampleRevenueVal: "1,542,857,000 UZS / 年",
-    sampleIrrBadge: "想定IRR: 約13.7%",
+    sampleProductionLabel: "初年度発電量",
+    sampleProductionVal: "4,200,000 kWh（EPC保証）",
+    sampleCapexLabel: "建設費用（CAPEX・投資総額）",
+    sampleCapexVal: "13,594,000,000 UZS（約106万USD）",
+    sampleRevenueLabel: "初年度投資家純配当（80%シェア・利益税15%控除後）",
+    sampleRevenueVal: "2,513,280,000 UZS / 初年度",
+    sampleIrrBadge: "初年度グロス利回り: 27.2%",
+    sample12YearNetLabel: "12年間累計投資家純配当（12-year Net）",
+    sample12YearNetVal: "51,996,810,014 UZS（約520億UZS / 約410万USD）",
+    sample12YearYieldBadge: "12年間総グロス利回り: 562.5%",
+    viewTableBtn: "12年間の詳細キャッシュフロー表を見る（Cash Flow）",
+    hideTableBtn: "表を閉じる",
+    tableFootnote: "ベースケース＝初年度EPC保証4,200,000 kWh。高位ケース＝4,500,000 kWh（12年間の投資家純利益+7.1%）。両ケースともに年間劣化率0.5%、初期売電単価880 UZS/kWh（PPA第5.1条に基づき年率10%スライド）、売上分配率UNISOLAR 20%・投資家80%、および投資家シェアに対する利益税15%を適用。",
+    tableHeaders: {
+      year: "年度",
+      generation: "発電量 (kWh)",
+      tariff: "売電単価 (UZS/kWh)",
+      grossBilling: "総売上高 (UZS)",
+      unisolarShare: "UNISOLAR 20% (UZS)",
+      investorShare: "投資家 80% (UZS)",
+      profitTax: "利益税 15% (UZS)",
+      investorNet: "投資家純利益 (UZS)",
+      yield: "プロジェクト利回り (%)"
+    },
     protectionTitle: "投資元本を守る法的所有・保全スキーム",
     protectionDesc: "海外投資において最も重要な法的一貫性と保全性を確保するため、UNISOLARは強固な契約構造を採用しています。",
     protectionPoints: [
@@ -290,36 +335,8 @@ export const jaTranslation: Translation = {
       "太陽光発電に直結した電気自動車（EV）急速充電器の併設"
     ]
   },
-  news: {
-    badge: "06 // ニュース",
-    title: "最新ニュース＆規制動向",
-    readMore: "記事全文を読む",
-    items: [
-      {
-        title: "シュルチ3.0MW太陽光発電所、国営送電網への高圧連系に成功",
-        date: "2026年6月14日",
-        category: "事業実績",
-        summary: "スルハンダリヤ州電力局の立ち会いのもと、UNISOLARエンジニアチームが連系試験を完了。製粉工場の日中電力を100%賄っています。",
-        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "ウズベキスタン政府、産業用自家消費型太陽光発電の税制優遇を大幅拡充",
-        date: "2026年5月28日",
-        category: "政策・法制",
-        summary: "新大統領令により、第三者所有型PPAを導入した工場に対する固定資産税および土地税の免税措置が拡大され、投資利回りが向上しました。",
-        image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "UNISOLAR、世界最大手パワーコンディショナメーカーSungrowと戦略的提携",
-        date: "2026年4月15日",
-        category: "アライアンス",
-        summary: "夏季の過酷な高温環境下での安定稼働を確保するため、メーカー直轄の迅速な現地保守・24時間以内ユニット交換網を確立しました。",
-        image: "https://images.unsplash.com/photo-1548613053-22003a8a06d2?auto=format&fit=crop&w=400&q=80"
-      }
-    ]
-  },
   contact: {
-    badge: "07 // お問い合わせ",
+    badge: "06 // お問い合わせ",
     title: "お問い合わせ",
     subtitle: "ウズベキスタンのクリーンエネルギーの未来を共に創りましょう",
     deskTitle: "UNISOLAR LLC（有限責任会社）",

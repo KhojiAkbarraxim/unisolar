@@ -8,7 +8,6 @@ export const enTranslation: Translation = {
     investors: "For Investors",
     solar3d: "3D Panel",
     services: "Services",
-    news: "News",
     contact: "Contact",
     investorZone: "Investor Zone"
   },
@@ -107,6 +106,35 @@ export const enTranslation: Translation = {
       { label: "Estimated Annual Output", value: "4.2 – 4.8 million kWh" },
       { label: "Operations & Maintenance", value: "100% covered by UNISOLAR (Full O&M & robotic washing)" },
       { label: "End of Term", value: "Plant ownership transferred to off-taker free of charge" }
+    ],
+    teamBadge: "01.7 // OUR TEAM",
+    teamTitle: "Executive Leadership & Specialists",
+    teamDesc: "Distinguished experts combining deep international proficiency in renewable energy engineering, legal compliance, and turnkey execution.",
+    teamMembers: [
+      {
+        name: "Bunyodbek Ibragimov",
+        role: "Founder & General Partner",
+        image: "/team/Bunyodbek_Ibragiimov_Founder_General_Partner.jpg",
+        fallbackImage: "/team/bunyodbek.jpg"
+      },
+      {
+        name: "Anvar Omonboyev",
+        role: "Director",
+        image: "/team/Anvar_Omonboyev_Director.jpg",
+        fallbackImage: "/team/anvar.jpg"
+      },
+      {
+        name: "Vafo Ortiqov",
+        role: "Project Manager",
+        image: "/team/Vafo_Ortriqov_Projectr_Manager.jpg",
+        fallbackImage: "/team/vafo.jpg"
+      },
+      {
+        name: "Said Raximov",
+        role: "Legal Advisor",
+        image: "/team/Said_Raximov_Legal_Advisor.JPG",
+        fallbackImage: "/team/said.jpg"
+      }
     ]
   },
   partners: {
@@ -181,18 +209,35 @@ export const enTranslation: Translation = {
       { title: "Institutional Transparency", desc: "Real-time investor dashboard displaying live telemetry, billing statements, and independent audit reports." },
       { title: "Unencumbered Asset Ownership", desc: "Investors retain direct, unencumbered legal ownership of physical solar modules and hardware." }
     ],
-    sampleBadge: "SAMPLE PROJECT MODEL",
-    exampleTitle: "Financial Benchmark (3.0 MW Utility Facility)",
-    exampleDesc: "Representative figures for a standard 3 MW facility. Comprehensive financial and audit packages are available inside the secure Investor Zone.",
+    sampleBadge: "FINANCIAL MODEL",
+    exampleTitle: "12-Year Cash Flow — 3 MW, Base Case (4.2M kWh)",
+    exampleDesc: "EPC-guaranteed 4,200,000 kWh in Year 1, initial tariff of 880 UZS/kWh escalating by 10% p.a. under PPA Clause 5.1.",
     sampleCapacityLabel: "Installed Capacity",
     sampleCapacityVal: "3.0 MWp (TOPCon)",
-    sampleProductionLabel: "Annual Generation",
-    sampleProductionVal: "4,800,000 kWh",
-    sampleCapexLabel: "Estimated CAPEX",
-    sampleCapexVal: "$2,250,000 USD",
-    sampleRevenueLabel: "Average Annual Revenue (Investor 80% Share)",
-    sampleRevenueVal: "1,542,857,000 UZS / year",
-    sampleIrrBadge: "~13.7% Estimated IRR",
+    sampleProductionLabel: "Year 1 Generation",
+    sampleProductionVal: "4,200,000 kWh (EPC Guaranteed)",
+    sampleCapexLabel: "Project CAPEX (Investment)",
+    sampleCapexVal: "13,594,000,000 UZS (~$1.06M)",
+    sampleRevenueLabel: "Year 1 Investor Net (80% share after 15% tax)",
+    sampleRevenueVal: "2,513,280,000 UZS / Year 1",
+    sampleIrrBadge: "27.2% Year 1 Gross Yield",
+    sample12YearNetLabel: "12-Year Total Investor Net Profit (12-Year Net)",
+    sample12YearNetVal: "51,996,810,014 UZS (~$4.1M / 52.0B UZS)",
+    sample12YearYieldBadge: "562.5% Total Gross Yield (12 Years)",
+    viewTableBtn: "View Complete 12-Year Cash Flow Table",
+    hideTableBtn: "Hide Cash Flow Table",
+    tableFootnote: "Base case = EPC-guaranteed 4,200,000 kWh in Year 1. High case = 4,500,000 kWh (+7.1% investor net over 12 years). Both cases assume 0.5% annual degradation, an initial tariff of 880 UZS/kWh escalating by 10% p.a. (PPA cl. 5.1), 20% UNISOLAR share of gross billing, 80% investor share, and 15% profit tax on the investor share. VAT 12% is assumed to be fully offset against available input VAT credit; additional cash VAT payment is modeled.",
+    tableHeaders: {
+      year: "Year",
+      generation: "Generation (kWh)",
+      tariff: "Tariff (UZS/kWh)",
+      grossBilling: "Gross Billing (UZS)",
+      unisolarShare: "UNISOLAR 20% (UZS)",
+      investorShare: "Investor 80% (UZS)",
+      profitTax: "Profit Tax 15% (UZS)",
+      investorNet: "Investor Net (UZS)",
+      yield: "Project Gross Yield (%)"
+    },
     protectionTitle: "Legal & Contractual Capital Protections",
     protectionDesc: "Cross-border investment requires uncompromised legal safeguards. UNISOLAR anchors every project within robust contractual and institutional frameworks.",
     protectionPoints: [
@@ -290,36 +335,8 @@ export const enTranslation: Translation = {
       "Fitted with EV chargers connected directly to solar"
     ]
   },
-  news: {
-    badge: "06 // CORPORATE BLOG",
-    title: "Latest News & Regulatory Updates",
-    readMore: "Read Full Article",
-    items: [
-      {
-        title: "Sho'rchi 3.0 MW Solar Power Plant Successfully Synchronized to National Grid",
-        date: "June 14, 2026",
-        category: "Operations",
-        summary: "In cooperation with the Surxondaryo Regional Grid Office, UNISOLAR engineers have successfully conducted final high-voltage coupling for the grain mill facility.",
-        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "Uzbekistan Announces Expanded Tax Exemptions for Industrial Solar Self-Generators",
-        date: "May 28, 2026",
-        category: "Legislation",
-        summary: "A new presidential decree has widened land and property tax relief for industrial factories hosting third-party solar installations, boosting returns.",
-        image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "UNISOLAR signs Strategic Agreement with Tier-1 Inverter Supplier Sungrow",
-        date: "April 15, 2026",
-        category: "Partnerships",
-        summary: "To maintain maximum equipment uptime in high-temperature conditions, UNISOLAR secured a direct factory warranty service channel from Sungrow.",
-        image: "https://images.unsplash.com/photo-1548613053-22003a8a06d2?auto=format&fit=crop&w=400&q=80"
-      }
-    ]
-  },
   contact: {
-    badge: "07 // GET IN TOUCH",
+    badge: "06 // GET IN TOUCH",
     title: "Get In Touch",
     subtitle: "Let's Build Uzbekistan's Green Energy Future Together",
     deskTitle: "UNISOLAR LLC",

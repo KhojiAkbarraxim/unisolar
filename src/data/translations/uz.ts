@@ -8,7 +8,6 @@ export const uzTranslation: Translation = {
     investors: "Investorlar uchun",
     solar3d: "3D Panel",
     services: "Xizmatlar",
-    news: "Yangiliklar",
     contact: "Bog'lanish",
     investorZone: "Investor zonasi"
   },
@@ -107,6 +106,35 @@ export const uzTranslation: Translation = {
       { label: "Yillik ishlab chiqarish", value: "Taxminan 4,2–4,8 mln kVt·soat" },
       { label: "Xizmat ko‘rsatish", value: "To‘liq «UNISOLAR» hisobidan (O&M va robotli tozalash)" },
       { label: "Shartnoma yakunida", value: "Stansiya buyurtmachi mulkiga bepul o‘tkaziladi" }
+    ],
+    teamBadge: "01.7 // BIZNING JAMOA",
+    teamTitle: "Professional boshqaruv jamoasi",
+    teamDesc: "Muhandislik, yuridik himoya va loyiha boshqaruvi sohasida xalqaro tajribaga ega yetakchi mutaxassislarimiz.",
+    teamMembers: [
+      {
+        name: "Bunyodbek Ibragimov",
+        role: "Asoschi va Bosh hamkor",
+        image: "/team/Bunyodbek_Ibragiimov_Founder_General_Partner.jpg",
+        fallbackImage: "/team/bunyodbek.jpg"
+      },
+      {
+        name: "Anvar Omonboyev",
+        role: "Direktor",
+        image: "/team/Anvar_Omonboyev_Director.jpg",
+        fallbackImage: "/team/anvar.jpg"
+      },
+      {
+        name: "Vafo Ortiqov",
+        role: "Loyiha menejeri",
+        image: "/team/Vafo_Ortriqov_Projectr_Manager.jpg",
+        fallbackImage: "/team/vafo.jpg"
+      },
+      {
+        name: "Said Raximov",
+        role: "Huquqiy maslahatchi",
+        image: "/team/Said_Raximov_Legal_Advisor.JPG",
+        fallbackImage: "/team/said.jpg"
+      }
     ]
   },
   partners: {
@@ -181,18 +209,35 @@ export const uzTranslation: Translation = {
       { title: "Yuqori shaffoflik", desc: "Shaxsiy investor portali orqali har daqiqalik quvvat ishlab chiqarish va pul tushumlarini onlayn kuzatish." },
       { title: "Haqiqiy aktivga egalik", desc: "Siz stansiya asbob-uskunalari va moddiy aktivlarining yagona qonuniy mulkdori bo‘lasiz." }
     ],
-    sampleBadge: "NAMUNAVIY LOYIHA MODELI",
-    exampleTitle: "Moliyaviy namuna (3.0 MVt quvvatli stansiya)",
-    exampleDesc: "Ushbu ma’lumotlar namunaviy hisob-kitob bo‘lib, to‘liq auditorlik hisobotlari shaxsiy investor portalida mavjud.",
+    sampleBadge: "MOLIYAVIY MODEL · FINANCIAL MODEL",
+    exampleTitle: "12 yillik pul oqimi — 3 MVt (Bazaviy ssenariy: 4.2M kVt·soat)",
+    exampleDesc: "1-yilda EPC tomonidan kafolatlangan 4 200 000 kVt·soat ishlab chiqarish, 880 so'm boshlang'ich tarif va 10% yillik indeksatsiya (PPA 5.1-bandi).",
     sampleCapacityLabel: "O‘rnatilgan quvvat",
     sampleCapacityVal: "3.0 MVt (TOPCon)",
-    sampleProductionLabel: "Yillik ishlab chiqarish",
-    sampleProductionVal: "4 800 000 kVt·soat",
-    sampleCapexLabel: "Taxminiy CAPEX",
-    sampleCapexVal: "2 250 000 USD",
-    sampleRevenueLabel: "O‘rtacha yillik tushum (Investor ulushi 80%)",
-    sampleRevenueVal: "1 542 857 000 so'm / yil",
-    sampleIrrBadge: "~13.7% Taxminiy IRR",
+    sampleProductionLabel: "1-yil ishlab chiqarish",
+    sampleProductionVal: "4 200 000 kVt·soat (kafolatlangan)",
+    sampleCapexLabel: "Loyiha CAPEX (investitsiya)",
+    sampleCapexVal: "13 594 000 000 so'm (~$1.06M)",
+    sampleRevenueLabel: "1-yil investor sof tushumi (80% ulush, 15% soliqdan so'ng)",
+    sampleRevenueVal: "2 513 280 000 so'm / 1-yil",
+    sampleIrrBadge: "27.2% Loyiha yalpi rentabelligi",
+    sample12YearNetLabel: "12 yillik jami investor sof foydasi (12-year Net)",
+    sample12YearNetVal: "51 996 810 014 so'm (~52.0 mlrd so'm)",
+    sample12YearYieldBadge: "562.5% Jami rentabellik (12 yil)",
+    viewTableBtn: "12 yillik to'liq pul oqimi jadvalini ko'rish (Cash Flow)",
+    hideTableBtn: "Jadvalni yopish",
+    tableFootnote: "Bazaviy ssenariy = 1-yilda EPC tomonidan kafolatlangan 4 200 000 kVt·soat. Yuqori ssenariy = 4 500 000 kVt·soat (12 yilda investor sof tushumi +7.1%). Ikkala ssenariy ham 0.5% yillik degradatsiyani, 880 so'm/kVt·soatlik boshlang'ich tarifni va uning har yili 10% ga oshishini (PPA 5.1-moddasi), yalpi tushumdan UNISOLAR ning 20% va investorning 80% ulushini hamda investor ulushiga 15% foyda solig'ini hisobga oladi.",
+    tableHeaders: {
+      year: "Yil",
+      generation: "Ishlab chiqarish (kVt·soat)",
+      tariff: "Tarif (so'm/kVt·soat)",
+      grossBilling: "Yalpi tushum (so'm)",
+      unisolarShare: "UNISOLAR 20% (so'm)",
+      investorShare: "Investor 80% (so'm)",
+      profitTax: "Foyda solig'i 15% (so'm)",
+      investorNet: "Investor sof tushumi (so'm)",
+      yield: "Loyiha rentabelligi (%)"
+    },
     protectionTitle: "Huquqiy va shartnomaviy himoya kafolatlari",
     protectionDesc: "Xalqaro sarmoyalarni kiritishda huquqiy xavfsizlik birinchi o‘rinda turadi. «UNISOLAR» har bir loyihani qat’iy qonuniy mexanizmlar bilan himoyalaydi.",
     protectionPoints: [
@@ -290,36 +335,8 @@ export const uzTranslation: Translation = {
       "Quyoshga to'g'ridan-to'g'ri ulangan elektromobil (EV) quvvatlagichlari"
     ]
   },
-  news: {
-    badge: "06 // YANGILIKLAR",
-    title: "So'nggi Yangiliklar va Me'yoriy Hujjatlar",
-    readMore: "Batafsil o'qish",
-    items: [
-      {
-        title: "Sho'rchi 3.0 MVt quyosh stansiyasi yagona elektr tarmog'iga muvaffaqiyatli ulandi",
-        date: "2026-yil 14-iyun",
-        category: "Ekspluatatsiya",
-        summary: "Surxondaryo hududiy elektr tarmoqlari korxonasi bilan hamkorlikda «Sho'rchi Don Mahsulotlari» QES to'liq quvvat bilan ishga tushirildi.",
-        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "O'zbekistonda quyosh energetikasi bo'yicha soliq imtiyozlari kengaytirildi",
-        date: "2026-yil 28-may",
-        category: "Qonunchilik",
-        summary: "Prezident qaroriga muvofiq, o'z ehtiyoji uchun quyosh stansiyalarini o'rnatgan korxonalar mol-mulk va yer solig'idan ozod etilmoqda.",
-        image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        title: "UNISOLAR dunyoga mashhur inverter ishlab chiqaruvchi Sungrow bilan shartnoma imzoladi",
-        date: "2026-yil 15-aprel",
-        category: "Hamkorlik",
-        summary: "Yuqori issiqlik sharoitida ishonchli ishlashni ta'minlash maqsadida bevosita zavod kafolati va 24 soatlik servis ta'minlanadi.",
-        image: "https://images.unsplash.com/photo-1548613053-22003a8a06d2?auto=format&fit=crop&w=400&q=80"
-      }
-    ]
-  },
   contact: {
-    badge: "07 // BIZ BILAN BOG'LANING",
+    badge: "06 // BIZ BILAN BOG'LANING",
     title: "Biz bilan bog'laning",
     subtitle: "O'zbekistonning yashil kelajagini birgalikda barpo etamiz",
     deskTitle: "UNISOLAR MChJ",

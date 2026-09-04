@@ -1,25 +1,3 @@
-export interface TeamMember {
-  name: string;
-  role: string;
-  image: string;
-}
-
-export interface Partner {
-  name: string;
-  logoUrl?: string;
-}
-
-export interface Project {
-  name: string;
-  location: string;
-  capacity: string;
-  status: 'completed' | 'ongoing' | 'planned';
-  panels: string;
-  inverters: string;
-  description: string;
-  image: string;
-}
-
 export interface MonthlyRecord {
   month: string;
   generation: number;
@@ -33,13 +11,9 @@ export interface Translation {
     home: string;
     about: string;
     partners: string;
-    howItWorks?: string;
     investors: string;
-    clients?: string;
-    projects?: string;
     services: string;
     solar3d: string;
-    news?: string;
     contact: string;
     investorZone: string;
   };
@@ -63,11 +37,6 @@ export interface Translation {
     statCapexLabel: string;
     systemStatus: string;
     stableGrid: string;
-    statCapacity?: string;
-    statExperience?: string;
-    statContracts?: string;
-    statAnnual?: string;
-    ctaClients?: string;
   };
   about: {
     badge: string;
@@ -99,15 +68,15 @@ export interface Translation {
     currentProjectBadge: string;
     currentProjectDesc: string;
     currentProjectSpecs: { label: string; value: string }[];
-    // legacy compatibility
-    historyTitle?: string;
-    historyText?: string;
-    missionText?: string;
-    valuesText?: string;
+    teamBadge?: string;
     teamTitle?: string;
-    partnersTitle?: string;
-    licenseTitle?: string;
-    licenseText?: string;
+    teamDesc?: string;
+    teamMembers?: {
+      name: string;
+      role: string;
+      image: string;
+      fallbackImage?: string;
+    }[];
   };
   partners: {
     badge: string;
@@ -151,6 +120,23 @@ export interface Translation {
     sampleRevenueLabel: string;
     sampleRevenueVal: string;
     sampleIrrBadge: string;
+    sample12YearNetLabel?: string;
+    sample12YearNetVal?: string;
+    sample12YearYieldBadge?: string;
+    viewTableBtn?: string;
+    hideTableBtn?: string;
+    tableFootnote?: string;
+    tableHeaders?: {
+      year: string;
+      generation: string;
+      tariff: string;
+      grossBilling: string;
+      unisolarShare: string;
+      investorShare: string;
+      profitTax: string;
+      investorNet: string;
+      yield: string;
+    };
     protectionTitle: string;
     protectionDesc: string;
     protectionPoints: string[];
@@ -222,18 +208,6 @@ export interface Translation {
     carportsTitle: string;
     carportsDesc: string;
     carportsFeatures: string[];
-  };
-  news: {
-    badge: string;
-    title: string;
-    readMore: string;
-    items: {
-      title: string;
-      date: string;
-      category: string;
-      summary: string;
-      image: string;
-    }[];
   };
   contact: {
     badge: string;
@@ -310,8 +284,4 @@ export interface Translation {
     allRights: string;
     bottomPpa: string;
   };
-  // Optional legacy sections
-  howItWorks?: any;
-  clients?: any;
-  projects?: any;
 }

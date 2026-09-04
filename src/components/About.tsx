@@ -8,6 +8,7 @@ import {
   FileText
 } from 'lucide-react';
 import { Translation } from '../translations';
+import TeamSection from './TeamSection';
 
 interface AboutProps {
   t: Translation;
@@ -308,6 +309,9 @@ export default function About({ t }: AboutProps) {
             </div>
           </div>
         </div>
+
+        {/* Team Section */}
+        <TeamSection t={t} />
 
       </div>
     </section>

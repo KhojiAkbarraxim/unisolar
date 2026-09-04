@@ -13,6 +13,13 @@ interface NavbarProps {
   isLoggedIn: boolean;
 }
 
+const LANGUAGES: { code: 'UZ' | 'RU' | 'EN' | 'JA'; label: string }[] = [
+  { code: 'UZ', label: 'Oʻzbek' },
+  { code: 'RU', label: 'Русский' },
+  { code: 'EN', label: 'English' },
+  { code: 'JA', label: '日本語' }
+];
+
 export default function Navbar({
   t,
   currentLang,
@@ -32,7 +39,6 @@ export default function Navbar({
     { id: 'investors', label: t.nav.investors },
     { id: 'solar3d', label: t.nav.solar3d, isHighlight: true },
     { id: 'services', label: t.nav.services },
-    { id: 'news', label: t.nav.news || 'Yangiliklar' },
     { id: 'contact', label: t.nav.contact },
   ];
 
@@ -44,13 +50,6 @@ export default function Navbar({
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const languages: { code: 'UZ' | 'RU' | 'EN' | 'JA'; label: string }[] = [
-    { code: 'UZ', label: 'Oʻzbek' },
-    { code: 'RU', label: 'Русский' },
-    { code: 'EN', label: 'English' },
-    { code: 'JA', label: '日本語' }
-  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs" id="nav-header">
@@ -95,11 +94,11 @@ export default function Navbar({
                 className="flex items-center space-x-1 px-3 py-2 rounded-md border border-slate-200 text-sm font-medium text-slate-700 hover:bg-slate-50 cursor-pointer"
               >
                 <Globe className="w-4 h-4 text-slate-400" />
-                <span>{languages.find(l => l.code === currentLang)?.label}</span>
+                <span>{LANGUAGES.find(l => l.code === currentLang)?.label}</span>
               </button>
               {langMenuOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-slate-100 py-1 z-50 animate-in fade-in slide-in-from-top-2 duration-150" id="lang-dropdown">
-                  {languages.map((lang) => (
+                  {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       id={`lang-select-${lang.code}`}
@@ -148,7 +147,7 @@ export default function Navbar({
               </button>
               {langMenuOpen && (
                 <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl border border-slate-100 py-1 z-50" id="mobile-lang-dropdown">
-                  {languages.map((lang) => (
+                  {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => {

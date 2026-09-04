@@ -514,19 +514,22 @@ export default function Solar3DStudio({ t }: Solar3DStudioProps) {
       { name: 'jbox', geo: jBoxGeo, mat: jBoxMat, offsetZ: -0.52, label: 'IP68 Junction Box with Diodes' }
     ];
 
+    // Guide rods on corners for exploded view
+    const rodGeo = new THREE.CylinderGeometry(0.003, 0.003, 1.1, 8);
+    const rodMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.4 });
+    const rod1 = new THREE.Mesh(rodGeo, rodMat);
+    rod1.rotation.x = Math.PI / 2;
+    rod1.position.set(-pw / 2 + 0.05, ph / 2 - 0.05, 0);
+    const rod2 = new THREE.Mesh(rodGeo, rodMat);
+    rod2.rotation.x = Math.PI / 2;
+    rod2.position.set(pw / 2 - 0.05, ph / 2 - 0.05, 0);
+    explodedGroup.add(rod1, rod2);
+
     layerItems.forEach((layer, idx) => {
       const mesh = new THREE.Mesh(layer.geo, layer.mat);
       mesh.position.z = layer.offsetZ;
       mesh.name = `layer-${idx}`;
       explodedGroup.add(mesh);
-
-      // Connecting guide rod
-      const rodGeo = new THREE.CylinderGeometry(0.003, 0.003, 1.1, 8);
-      const rodMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.4 });
-      const rodL = new THREE.Mesh(rodGeo, rodMat);
-      rodL.rotation.x = Math.PI / 2;
-      rodL.position.set(-pw / 2 + 0.05, ph / 2 - 0.05, 0);
-      explodedGroup.add(rodL);
     });
 
     rootGroup.add(explodedGroup);
@@ -676,6 +679,25 @@ export default function Solar3DStudio({ t }: Solar3DStudioProps) {
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerup', onPointerUp);
       mount.removeEventListener('wheel', onWheel);
+
+      // Recursive disposal of scene geometries & materials
+      scene.traverse((object) => {
+        if (object instanceof THREE.Mesh || object instanceof THREE.Points) {
+          if (object.geometry) object.geometry.dispose();
+          if (object.material) {
+            if (Array.isArray(object.material)) {
+              object.material.forEach((m) => {
+                if (m.map) m.map.dispose();
+                m.dispose();
+              });
+            } else {
+              if (object.material.map) object.material.map.dispose();
+              object.material.dispose();
+            }
+          }
+        }
+      });
+
       if (renderer.domElement && mount.contains(renderer.domElement)) {
         mount.removeChild(renderer.domElement);
       }
