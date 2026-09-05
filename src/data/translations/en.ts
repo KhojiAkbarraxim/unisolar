@@ -27,8 +27,6 @@ export const enTranslation: Translation = {
     statTermLabel: "PPA Contract Duration",
     statTariffVal: "20%",
     statTariffLabel: "Discount Below State Tariff",
-    statCapexVal: "Not Required",
-    statCapexLabel: "Client Upfront Capital",
     systemStatus: "SYSTEM STATUS: OPERATIONAL",
     stableGrid: "STABLE GRID CONNECTION"
   },
@@ -102,10 +100,7 @@ export const enTranslation: Translation = {
       { label: "Installed Capacity", value: "3.0 MWp" },
       { label: "PPA Contract Duration", value: "12 Years" },
       { label: "Power Tariff", value: "20% below state grid tariff (indexed)" },
-      { label: "Client Capital Outlay", value: "Not Required" },
-      { label: "Estimated Annual Output", value: "4.2 – 4.8 million kWh" },
-      { label: "Operations & Maintenance", value: "100% covered by UNISOLAR (Full O&M & robotic washing)" },
-      { label: "End of Term", value: "Plant ownership transferred to off-taker free of charge" }
+      { label: "Estimated Annual Output", value: "4.2 – 4.8 million kWh" }
     ],
     teamBadge: "01.7 // OUR TEAM",
     teamTitle: "Executive Leadership & Specialists",

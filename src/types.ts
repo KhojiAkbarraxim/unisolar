@@ -33,8 +33,7 @@ export interface Translation {
     statTermLabel: string;
     statTariffVal: string;
     statTariffLabel: string;
-    statCapexVal: string;
-    statCapexLabel: string;
+
     systemStatus: string;
     stableGrid: string;
   };

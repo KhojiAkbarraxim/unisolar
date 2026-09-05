@@ -100,10 +100,6 @@ export default function About({ t }: AboutProps) {
               <div className="text-sm font-semibold text-slate-200">{t.hero.statTariffLabel}</div>
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <div className="text-3xl sm:text-4xl font-mono font-bold text-amber-300 mb-2">{t.hero.statCapexVal}</div>
-              <div className="text-sm font-semibold text-slate-200">{t.hero.statCapexLabel}</div>
-            </div>
           </div>
         </div>
 

@@ -27,8 +27,6 @@ export const jaTranslation: Translation = {
     statTermLabel: "PPA契約期間",
     statTariffVal: "20%",
     statTariffLabel: "国定料金より安価",
-    statCapexVal: "不要",
-    statCapexLabel: "顧客初期投資",
     systemStatus: "システム状態: 正常稼働中",
     stableGrid: "安定系統連系"
   },
@@ -102,10 +100,7 @@ export const jaTranslation: Translation = {
       { label: "設備容量", value: "3.0 MWp" },
       { label: "PPA契約期間", value: "12年間" },
       { label: "供給電力料金", value: "国定料金より20%安価（インデックス連動）" },
-      { label: "顧客初期負担", value: "不要" },
-      { label: "年間想定発電量", value: "約420万〜480万 kWh" },
-      { label: "保守管理", value: "UNISOLARが全額負担（ロボット洗浄・定期点検）" },
-      { label: "契約終了時", value: "発電設備一式を顧客企業へ無償譲渡" }
+      { label: "年間想定発電量", value: "約420万〜480万 kWh" }
     ],
     teamBadge: "01.7 // 経営・技術チーム",
     teamTitle: "経営陣およびコアメンバー",

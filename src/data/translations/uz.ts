@@ -27,8 +27,6 @@ export const uzTranslation: Translation = {
     statTermLabel: "PPA shartnoma muddati",
     statTariffVal: "20%",
     statTariffLabel: "Davlat tarifidan arzon",
-    statCapexVal: "Talab qilinmaydi",
-    statCapexLabel: "Buyurtmachi investitsiyasi",
     systemStatus: "TIZIM HOLATI: FAOL",
     stableGrid: "BARQAROR TARMOQ"
   },
@@ -102,10 +100,7 @@ export const uzTranslation: Translation = {
       { label: "O‘rnatilgan quvvat", value: "3 MVt" },
       { label: "PPA shartnoma muddati", value: "12 yil" },
       { label: "Elektr tarifi", value: "Davlat tarifidan 20% arzonroq (indeksatsiya qilinadi)" },
-      { label: "Buyurtmachi sarmoyasi", value: "Talab qilinmaydi" },
-      { label: "Yillik ishlab chiqarish", value: "Taxminan 4,2–4,8 mln kVt·soat" },
-      { label: "Xizmat ko‘rsatish", value: "To‘liq «UNISOLAR» hisobidan (O&M va robotli tozalash)" },
-      { label: "Shartnoma yakunida", value: "Stansiya buyurtmachi mulkiga bepul o‘tkaziladi" }
+      { label: "Yillik ishlab chiqarish", value: "Taxminan 4,2–4,8 mln kVt·soat" }
     ],
     teamBadge: "01.7 // BIZNING JAMOA",
     teamTitle: "Professional boshqaruv jamoasi",

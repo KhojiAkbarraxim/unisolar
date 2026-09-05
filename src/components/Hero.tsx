@@ -128,11 +128,7 @@ export default function Hero({ t, onSectionScroll }: HeroProps) {
                   <span className="block text-xs text-slate-400 mt-1">{t.hero.statTariffLabel}</span>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-slate-950/40 border border-slate-850">
-                  <ShieldCheck className="w-6 h-6 text-amber-400 mb-2" />
-                  <span className="block text-2xl sm:text-3xl font-mono font-bold text-white">{t.hero.statCapexVal}</span>
-                  <span className="block text-xs text-slate-400 mt-1">{t.hero.statCapexLabel}</span>
-                </div>
+
               </div>
 
               <div className="pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
