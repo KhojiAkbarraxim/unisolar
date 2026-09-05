@@ -115,19 +115,19 @@ export const jaTranslation: Translation = {
       {
         name: "Anvar Omonboyev",
         role: "ディレクター / 代表責任者",
-        image: "/team/Anvar_Omonboyev_Director.jpg",
+        image: "/team/Anvar_Omonboyev_Director.png",
         fallbackImage: "/team/anvar.jpg"
       },
       {
         name: "Vafo Ortiqov",
         role: "プロジェクトマネージャー",
-        image: "/team/Vafo_Ortriqov_Projectr_Manager.jpg",
+        image: "/team/Vafo_Ortriqov_Projectr_Manager.png",
         fallbackImage: "/team/vafo.jpg"
       },
       {
         name: "Said Raximov",
         role: "法務アドバイザー",
-        image: "/team/Said_Raximov_Legal_Advisor.JPG",
+        image: "/team/Said_Raximov_Legal_Advisor.png",
         fallbackImage: "/team/said.jpg"
       }
     ]

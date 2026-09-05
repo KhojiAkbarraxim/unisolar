@@ -115,19 +115,19 @@ export const uzTranslation: Translation = {
       {
         name: "Anvar Omonboyev",
         role: "Direktor",
-        image: "/team/Anvar_Omonboyev_Director.jpg",
+        image: "/team/Anvar_Omonboyev_Director.png",
         fallbackImage: "/team/anvar.jpg"
       },
       {
         name: "Vafo Ortiqov",
         role: "Loyiha menejeri",
-        image: "/team/Vafo_Ortriqov_Projectr_Manager.jpg",
+        image: "/team/Vafo_Ortriqov_Projectr_Manager.png",
         fallbackImage: "/team/vafo.jpg"
       },
       {
         name: "Said Raximov",
         role: "Huquqiy maslahatchi",
-        image: "/team/Said_Raximov_Legal_Advisor.JPG",
+        image: "/team/Said_Raximov_Legal_Advisor.png",
         fallbackImage: "/team/said.jpg"
       }
     ]
