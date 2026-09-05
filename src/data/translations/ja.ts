@@ -27,7 +27,7 @@ export const jaTranslation: Translation = {
     statTermLabel: "PPA契約期間",
     statTariffVal: "20%",
     statTariffLabel: "国定料金より安価",
-    statCapexVal: "0円",
+    statCapexVal: "不要",
     statCapexLabel: "顧客初期投資",
     systemStatus: "システム状態: 正常稼働中",
     stableGrid: "安定系統連系"
@@ -50,7 +50,7 @@ export const jaTranslation: Translation = {
       { label: "登記住所", value: "ホレズム州ウルゲンチ地区「Oq ariqlar」MFY、「Yangi Xorazm」通り96号" },
       { label: "代表取締役", value: "Nematov Nodirbek Nematilloyevich" },
       { label: "主要出資・提携会社", value: "Japan Uz Trade House LLC（日本–ウズベキスタン）" },
-      { label: "公式ウェブサイト", value: "unisolar.ai.studio" }
+      { label: "公式ウェブサイト", value: "unisolar.uz" }
     ],
     missionTitle: "企業理念・ミッション",
     missionDesc: "ウズベキスタンの産業界に初期投資ゼロでクリーンかつ安価な太陽光電力を安定供給し、同国の脱炭素化と持続可能なグリーン成長に貢献することを使命とします。",
@@ -102,7 +102,7 @@ export const jaTranslation: Translation = {
       { label: "設備容量", value: "3.0 MWp" },
       { label: "PPA契約期間", value: "12年間" },
       { label: "供給電力料金", value: "国定料金より20%安価（インデックス連動）" },
-      { label: "顧客初期負担", value: "0円（全額投資家・UNISOLAR負担）" },
+      { label: "顧客初期負担", value: "不要" },
       { label: "年間想定発電量", value: "約420万〜480万 kWh" },
       { label: "保守管理", value: "UNISOLARが全額負担（ロボット洗浄・定期点検）" },
       { label: "契約終了時", value: "発電設備一式を顧客企業へ無償譲渡" }

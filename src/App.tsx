@@ -185,7 +185,7 @@ export default function App() {
                   <span>+998 (90) 123-45-67</span>
                 </p>
                 <p className="text-slate-500 text-[11px] font-mono pt-1">
-                  Veb-sayt: unisolar.ai.studio
+                  Veb-sayt: unisolar.uz
                 </p>
               </div>
             </div>

@@ -176,17 +176,7 @@ export default function InvestorZone({ t, isLoggedIn, setIsLoggedIn }: InvestorZ
                 <Activity className="w-4 h-4" />
                 <span>{t.investorZone.tabLiveTelemetry}</span>
               </button>
-              <button
-                onClick={() => setActiveTab('payouts')}
-                className={`px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider border-b-2 transition-all cursor-pointer flex items-center space-x-2 shrink-0 ${
-                  activeTab === 'payouts'
-                    ? 'border-brand-orange text-brand-orange bg-slate-950/20'
-                    : 'border-transparent text-slate-400 hover:text-white'
-                }`}
-              >
-                <BarChart3 className="w-4 h-4" />
-                <span>{t.investorZone.tabDisbursements}</span>
-              </button>
+
               <button
                 onClick={() => setActiveTab('docs')}
                 className={`px-5 py-3.5 text-xs font-mono font-bold uppercase tracking-wider border-b-2 transition-all cursor-pointer flex items-center space-x-2 shrink-0 ${
@@ -262,54 +252,11 @@ export default function InvestorZone({ t, isLoggedIn, setIsLoggedIn }: InvestorZ
                       <span className="block text-slate-400 uppercase font-bold">{t.investorZone.totalCo2Savings}</span>
                       <span className="text-base font-bold text-white">3,124.5 tons</span>
                     </div>
-                    <div className="p-4 rounded-xl bg-slate-900 border border-slate-850">
-                      <span className="block text-slate-400 uppercase font-bold">{t.investorZone.totalCashPaid}</span>
-                      <span className="text-base font-bold text-emerald-400">1 139 248 800 UZS</span>
-                    </div>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* TAB: PAYOUTS */}
-            {activeTab === 'payouts' && (
-              <div className="bg-slate-950 rounded-3xl border border-slate-850 p-6 sm:p-8 animate-in fade-in duration-150" id="tab-payouts">
-                <div className="flex justify-between items-center mb-6">
-                  <h4 className="text-lg font-display font-bold">{t.investorZone.monthlyDist}</h4>
-                  <span className="text-[10px] font-mono text-slate-400">{t.investorZone.auditedBy}</span>
-                </div>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-xs font-mono text-slate-300">
-                    <thead className="border-b border-slate-800 text-slate-400 uppercase text-[10px] tracking-wider">
-                      <tr>
-                        <th className="py-3 px-4">{t.investorZone.monthCol}</th>
-                        <th className="py-3 px-4">{t.investorZone.generationCol}</th>
-                        <th className="py-3 px-4">{t.investorZone.revenueCol}</th>
-                        <th className="py-3 px-4">{t.investorZone.payoutCol}</th>
-                        <th className="py-3 px-4 text-right">{t.investorZone.statusCol}</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-850">
-                      {sampleInvestorData.map((row, index) => (
-                        <tr key={index} id={`payout-row-${index}`} className="hover:bg-slate-900/50">
-                          <td className="py-4 px-4 font-bold text-white">{row.month}</td>
-                          <td className="py-4 px-4">{row.generation.toFixed(1)} MWh</td>
-                          <td className="py-4 px-4 text-slate-400">{row.revenue}</td>
-                          <td className="py-4 px-4 font-bold text-emerald-400">{row.payout}</td>
-                          <td className="py-4 px-4 text-right">
-                            <span className="inline-flex items-center space-x-1 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold border border-emerald-500/20">
-                              <CheckCircle2 className="w-3 h-3" />
-                              <span>{t.investorZone.verified}</span>
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            )}
 
             {/* TAB: DOCS */}
             {activeTab === 'docs' && (

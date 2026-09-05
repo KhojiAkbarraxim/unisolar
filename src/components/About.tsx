@@ -35,7 +35,7 @@ export default function About({ t }: AboutProps) {
             <div className="text-xs font-mono text-slate-500 flex items-center gap-3">
               <span>STIR: <strong className="text-slate-800 font-bold">312 853 539</strong></span>
               <span className="text-slate-300">|</span>
-              <span>unisolar.ai.studio</span>
+              <span>unisolar.uz</span>
             </div>
           </div>
 

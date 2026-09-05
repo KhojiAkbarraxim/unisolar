@@ -27,7 +27,7 @@ export const uzTranslation: Translation = {
     statTermLabel: "PPA shartnoma muddati",
     statTariffVal: "20%",
     statTariffLabel: "Davlat tarifidan arzon",
-    statCapexVal: "0 so'm",
+    statCapexVal: "Talab qilinmaydi",
     statCapexLabel: "Buyurtmachi investitsiyasi",
     systemStatus: "TIZIM HOLATI: FAOL",
     stableGrid: "BARQAROR TARMOQ"
@@ -50,7 +50,7 @@ export const uzTranslation: Translation = {
       { label: "Yuridik manzil", value: "Xorazm viloyati, Urganch tumani, «Oq ariqlar» MFY, «Yangi Xorazm» ko‘chasi, 96-uy" },
       { label: "Direktor", value: "Nematov Nodirbek Nematilloyevich" },
       { label: "Asosiy muassis va hamkor", value: "«Japan Uz Trade House» MChJ (Yaponiya–O‘zbekiston)" },
-      { label: "Veb-sayt", value: "unisolar.ai.studio" }
+      { label: "Veb-sayt", value: "unisolar.uz" }
     ],
     missionTitle: "Bizning missiyamiz",
     missionDesc: "O‘zbekiston sanoat va tijorat korxonalariga toza, arzon va uzluksiz quyosh energiyasini hech qanday boshlang‘ich xarajatsiz yetkazib berish, mamlakatimizda qayta tiklanuvchi energetika ulushini oshirish va ekologik barqaror kelajak barpo etishga munosib hissa qo‘shish.",
@@ -102,7 +102,7 @@ export const uzTranslation: Translation = {
       { label: "O‘rnatilgan quvvat", value: "3 MVt" },
       { label: "PPA shartnoma muddati", value: "12 yil" },
       { label: "Elektr tarifi", value: "Davlat tarifidan 20% arzonroq (indeksatsiya qilinadi)" },
-      { label: "Buyurtmachi sarmoyasi", value: "0 so‘m (Talab qilinmaydi)" },
+      { label: "Buyurtmachi sarmoyasi", value: "Talab qilinmaydi" },
       { label: "Yillik ishlab chiqarish", value: "Taxminan 4,2–4,8 mln kVt·soat" },
       { label: "Xizmat ko‘rsatish", value: "To‘liq «UNISOLAR» hisobidan (O&M va robotli tozalash)" },
       { label: "Shartnoma yakunida", value: "Stansiya buyurtmachi mulkiga bepul o‘tkaziladi" }

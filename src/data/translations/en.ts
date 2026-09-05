@@ -27,7 +27,7 @@ export const enTranslation: Translation = {
     statTermLabel: "PPA Contract Duration",
     statTariffVal: "20%",
     statTariffLabel: "Discount Below State Tariff",
-    statCapexVal: "$0",
+    statCapexVal: "Not Required",
     statCapexLabel: "Client Upfront Capital",
     systemStatus: "SYSTEM STATUS: OPERATIONAL",
     stableGrid: "STABLE GRID CONNECTION"
@@ -50,7 +50,7 @@ export const enTranslation: Translation = {
       { label: "Registered Address", value: "Khorezm Region, Urgench District, Oq Ariqlar MCA, Yangi Khorezm St., 96" },
       { label: "Managing Director", value: "Nematov Nodirbek Nematilloyevich" },
       { label: "Core Founder & Partner", value: "Japan Uz Trade House LLC (Japan–Uzbekistan)" },
-      { label: "Official Web Portal", value: "unisolar.ai.studio" }
+      { label: "Official Web Portal", value: "unisolar.uz" }
     ],
     missionTitle: "Our Mission",
     missionDesc: "To provide industrial and commercial enterprises across Uzbekistan with clean, affordable, and uninterrupted solar energy at zero initial capital cost, accelerating national green transition targets and laying the foundations of a decarbonized future.",
@@ -102,7 +102,7 @@ export const enTranslation: Translation = {
       { label: "Installed Capacity", value: "3.0 MWp" },
       { label: "PPA Contract Duration", value: "12 Years" },
       { label: "Power Tariff", value: "20% below state grid tariff (indexed)" },
-      { label: "Client Capital Outlay", value: "$0 (Zero CAPEX requirement)" },
+      { label: "Client Capital Outlay", value: "Not Required" },
       { label: "Estimated Annual Output", value: "4.2 – 4.8 million kWh" },
       { label: "Operations & Maintenance", value: "100% covered by UNISOLAR (Full O&M & robotic washing)" },
       { label: "End of Term", value: "Plant ownership transferred to off-taker free of charge" }
