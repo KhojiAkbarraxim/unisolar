@@ -9,6 +9,8 @@ import Solar3DStudio from './components/Solar3DStudio';
 import MechanismFlow from './components/MechanismFlow';
 import DeliveryTimeline from './components/DeliveryTimeline';
 import ReturnVisualizer from './components/ReturnVisualizer';
+import RiskMatrix from './components/RiskMatrix';
+import TheCaseBlock from './components/TheCaseBlock';
 import Contact from './components/Contact';
 import InvestorZone from './components/InvestorZone';
 import { translations } from './translations';
@@ -116,6 +118,12 @@ export default function App() {
 
         {/* 03.7 · Return Visualizer */}
         <ReturnVisualizer t={t} />
+
+        {/* 03.8 · Risk Matrix */}
+        <RiskMatrix t={t} />
+
+        {/* 03.9 · The Case — xulosaviy investor blok */}
+        <TheCaseBlock t={t} onConsultationClick={handleConsultationRequest} />
 
         {/* 04 · Interaktiv 3D Quyosh Paneli Studiyasi */}
         <Solar3DStudio t={t} />

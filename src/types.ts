@@ -274,6 +274,28 @@ export interface Translation {
       btnText: string;
     }[];
   };
+  riskMatrix?: {
+    badge: string; title: string; subtitle: string; footnote: string;
+    legendEpc: string; legendUnisolar: string; legendOfftaker: string;
+    legendShared: string; legendInvestor: string;
+    r1Risk: string; r1Owner: string; r1Mit: string;
+    r2Risk: string; r2Owner: string; r2Mit: string;
+    r3Risk: string; r3Owner: string; r3Mit: string;
+    r4Risk: string; r4Owner: string; r4Mit: string;
+    r5Risk: string; r5Owner: string; r5Mit: string;
+    r6Risk: string; r6Owner: string; r6Mit: string;
+    r7Risk: string; r7Owner: string; r7Mit: string;
+    r8Risk: string; r8Owner: string; r8Mit: string;
+  };
+  theCase?: {
+    badge: string; title: string; subtitle: string;
+    arg1Title: string; arg1Desc: string;
+    arg2Title: string; arg2Desc: string;
+    arg3Title: string; arg3Desc: string;
+    arg4Title: string; arg4Desc: string;
+    ctaBadge: string; ctaTitle: string; ctaDesc: string;
+    ctaStir: string; ctaBtn: string; ctaBtnSecondary: string;
+  };
   delivery?: {
     badge: string; title: string; subtitle: string;
     m1Day: string; m1Label: string; m1Desc: string;
