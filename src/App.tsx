@@ -6,6 +6,7 @@ import Partners from './components/Partners';
 import ForInvestors from './components/ForInvestors';
 import Services from './components/Services';
 import Solar3DStudio from './components/Solar3DStudio';
+import MechanismFlow from './components/MechanismFlow';
 import Contact from './components/Contact';
 import InvestorZone from './components/InvestorZone';
 import { translations } from './translations';
@@ -104,6 +105,9 @@ export default function App() {
 
         {/* 03 · Investorlar uchun */}
         <ForInvestors t={t} onConsultationClick={handleConsultationRequest} />
+
+        {/* 03.5 · Pul oqimi mexanizmi vizualizatsiyasi */}
+        <MechanismFlow t={t} />
 
         {/* 04 · Interaktiv 3D Quyosh Paneli Studiyasi */}
         <Solar3DStudio t={t} />
