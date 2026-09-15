@@ -7,6 +7,8 @@ import ForInvestors from './components/ForInvestors';
 import Services from './components/Services';
 import Solar3DStudio from './components/Solar3DStudio';
 import MechanismFlow from './components/MechanismFlow';
+import DeliveryTimeline from './components/DeliveryTimeline';
+import ReturnVisualizer from './components/ReturnVisualizer';
 import Contact from './components/Contact';
 import InvestorZone from './components/InvestorZone';
 import { translations } from './translations';
@@ -108,6 +110,12 @@ export default function App() {
 
         {/* 03.5 · Pul oqimi mexanizmi vizualizatsiyasi */}
         <MechanismFlow t={t} />
+
+        {/* 03.6 · Delivery Timeline */}
+        <DeliveryTimeline t={t} />
+
+        {/* 03.7 · Return Visualizer */}
+        <ReturnVisualizer t={t} />
 
         {/* 04 · Interaktiv 3D Quyosh Paneli Studiyasi */}
         <Solar3DStudio t={t} />

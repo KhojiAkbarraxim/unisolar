@@ -274,6 +274,28 @@ export interface Translation {
       btnText: string;
     }[];
   };
+  delivery?: {
+    badge: string; title: string; subtitle: string;
+    m1Day: string; m1Label: string; m1Desc: string;
+    m2Day: string; m2Label: string; m2Desc: string;
+    m3Day: string; m3Label: string; m3Desc: string;
+    m4Day: string; m4Label: string; m4Desc: string;
+    m5Day: string; m5Label: string; m5Desc: string;
+    m6Day: string; m6Label: string; m6Desc: string;
+    thenBadge: string; thenTitle: string;
+    thenPoint1: string; thenPoint2: string; thenPoint3: string;
+  };
+  returns?: {
+    badge: string; title: string; subtitle: string;
+    kpi1Label: string; kpi1Value: string; kpi1Note: string;
+    kpi2Label: string; kpi2Value: string; kpi2Note: string;
+    kpi3Label: string; kpi3Value: string; kpi3Note: string;
+    chartBadge: string; chartTitle: string;
+    legendSolar: string; legendBank: string;
+    bankLine: string; tooltipLabel: string; chartNote: string;
+    paybackTitle: string; paybackDesc: string;
+    escalationTitle: string; escalationDesc: string;
+  };
   mechanism?: {
     badge: string;
     title: string;
