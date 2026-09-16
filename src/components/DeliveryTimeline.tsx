@@ -106,16 +106,40 @@ export default function DeliveryTimeline({ t: _t }: DeliveryTimelineProps) {
           </p>
         </motion.div>
 
-        {/* Desktop horizontal timeline */}
-        <div className="hidden lg:block relative mb-12">
-          {/* Animated progress line */}
-          <div className="absolute top-[28px] left-[5%] right-[5%] h-0.5 bg-slate-200 z-0">
+        {/* Desktop horizontal timeline — creative connector */}
+        <div className="hidden lg:block relative mb-16">
+
+          {/* Track background — dashed rail */}
+          <div className="absolute top-[27px] left-[calc(100%/12)] right-[calc(100%/12)] h-px z-0">
+            {/* Base dashed track */}
+            <div className="w-full h-full border-t-2 border-dashed border-slate-200" />
+            {/* Animated glow fill on top */}
             <motion.div
               initial={{ width: '0%' }}
               animate={isInView ? { width: '100%' } : {}}
-              transition={{ duration: 1.4, delay: 0.3, ease: 'easeOut' }}
-              className="h-full bg-gradient-to-r from-brand-orange via-emerald-400 to-emerald-300"
+              transition={{ duration: 1.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="absolute top-0 left-0 h-full"
+              style={{
+                background: 'linear-gradient(90deg, #f97316 0%, #fb923c 30%, #a78bfa 60%, #34d399 100%)',
+                height: '2px',
+                boxShadow: '0 0 8px 2px rgba(249,115,22,0.4)',
+              }}
             />
+          </div>
+
+          {/* Step number badges — float above connectors */}
+          <div className="absolute top-[12px] left-[calc(100%/12)] right-[calc(100%/12)] flex justify-between z-0 pointer-events-none">
+            {[1, 2, 3, 4, 5].map((n) => (
+              <motion.div
+                key={n}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.3, delay: 0.5 + n * 0.18 }}
+                className="w-[18px] h-[18px] rounded-full bg-white border border-slate-200 flex items-center justify-center shadow-sm"
+              >
+                <span className="text-[7px] font-mono font-black text-slate-400">{n}</span>
+              </motion.div>
+            ))}
           </div>
 
           {/* Milestone nodes */}
@@ -125,15 +149,20 @@ export default function DeliveryTimeline({ t: _t }: DeliveryTimelineProps) {
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.2 + idx * 0.13 }}
-                className="flex flex-col items-center"
+                transition={{ duration: 0.5, delay: 0.2 + idx * 0.14 }}
+                className="flex flex-col items-center group"
               >
-                {/* Dot */}
-                <div className={`w-14 h-14 rounded-2xl ${m.bg} border-2 ${m.border} ${m.color} flex items-center justify-center mb-4 shadow-sm`}>
-                  {m.icon}
+                {/* Icon node with ring pulse */}
+                <div className="relative mb-4">
+                  <div className={`absolute inset-0 rounded-2xl ${m.bg} scale-150 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300`} />
+                  <div className={`relative w-14 h-14 rounded-2xl ${m.bg} border-2 ${m.border} ${m.color} flex items-center justify-center shadow-sm`}>
+                    {m.icon}
+                  </div>
+                  {/* Connector dot at bottom center */}
+                  <div className={`absolute -bottom-[17px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full ${m.dot} border-2 border-white shadow-sm`} />
                 </div>
                 {/* Day badge */}
-                <span className={`text-[10px] font-mono font-extrabold uppercase tracking-wider ${m.color} mb-1`}>
+                <span className={`text-[10px] font-mono font-extrabold uppercase tracking-wider ${m.color} mb-1 mt-1`}>
                   {m.day}
                 </span>
                 {/* Label */}

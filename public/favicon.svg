@@ -1,0 +1,32 @@
+<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fg-sun" x1="60" y1="10" x2="60" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD200"/>
+      <stop offset="100%" stop-color="#FF9000"/>
+    </linearGradient>
+    <linearGradient id="fg-u" x1="60" y1="35" x2="60" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0A52C5"/>
+      <stop offset="100%" stop-color="#001B65"/>
+    </linearGradient>
+    <mask id="fg-leaf">
+      <rect x="0" y="0" width="120" height="120" fill="#fff"/>
+      <path d="M 44,42 C 43,58 48,70 60,74 C 72,78 84,68 87,42 C 77,53 62,53 44,42 Z" fill="#000"/>
+    </mask>
+  </defs>
+  <!-- Sun rays -->
+  <g stroke="url(#fg-sun)" stroke-width="3.2" stroke-linecap="round" opacity="0.95">
+    <line x1="60.00" y1="14.00" x2="60.00" y2="23.00"/>
+    <line x1="73.82" y1="17.69" x2="69.26" y2="25.62"/>
+    <line x1="84.31" y1="27.69" x2="77.38" y2="32.26"/>
+    <line x1="88.00" y1="41.50" x2="79.00" y2="41.50"/>
+    <line x1="84.31" y1="55.31" x2="77.38" y2="50.74"/>
+    <line x1="46.18" y1="17.69" x2="50.74" y2="25.62"/>
+    <line x1="35.69" y1="27.69" x2="42.62" y2="32.26"/>
+    <line x1="32.00" y1="41.50" x2="41.00" y2="41.50"/>
+    <line x1="35.69" y1="55.31" x2="42.62" y2="50.74"/>
+  </g>
+  <!-- Sun body -->
+  <circle cx="60" cy="41.5" r="15" fill="url(#fg-sun)" mask="url(#fg-leaf)"/>
+  <!-- U shape -->
+  <path d="M35 35 L35 80 Q35 105 60 105 Q85 105 85 80 L85 35 L70 35 L70 80 Q70 90 60 90 Q50 90 50 80 L50 35 Z" fill="url(#fg-u)"/>
+</svg>
