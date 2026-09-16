@@ -11,6 +11,10 @@ import DeliveryTimeline from './components/DeliveryTimeline';
 import ReturnVisualizer from './components/ReturnVisualizer';
 import RiskMatrix from './components/RiskMatrix';
 import TheCaseBlock from './components/TheCaseBlock';
+import AssetProfile from './components/AssetProfile';
+import PpaTermSheet from './components/PpaTermSheet';
+import ScenarioChart from './components/ScenarioChart';
+import TaxRegulatory from './components/TaxRegulatory';
 import Contact from './components/Contact';
 import InvestorZone from './components/InvestorZone';
 import { translations } from './translations';
@@ -107,8 +111,17 @@ export default function App() {
         {/* 02 · Bizning hamkorlarimiz (Strategik va Muhandislik hamkorlar) */}
         <Partners t={t} />
 
+        {/* 00 · Ob'ekt profili — AssetProfile */}
+        <AssetProfile t={t} />
+
         {/* 03 · Investorlar uchun */}
         <ForInvestors t={t} onConsultationClick={handleConsultationRequest} />
+
+        {/* 03.1 · PPA Shartlari */}
+        <PpaTermSheet t={t} />
+
+        {/* 03.2 · Generatsiya Ssenariysi */}
+        <ScenarioChart t={t} />
 
         {/* 03.5 · Pul oqimi mexanizmi vizualizatsiyasi */}
         <MechanismFlow t={t} />
@@ -118,6 +131,9 @@ export default function App() {
 
         {/* 03.7 · Return Visualizer */}
         <ReturnVisualizer t={t} />
+
+        {/* 03.75 · Soliq va Tartibga Solish */}
+        <TaxRegulatory t={t} />
 
         {/* 03.8 · Risk Matrix */}
         <RiskMatrix t={t} />

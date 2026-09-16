@@ -274,6 +274,56 @@ export interface Translation {
       btnText: string;
     }[];
   };
+  ppa?: {
+    badge: string; title: string; subtitle: string; stripTitle: string; stripDesc: string;
+    t1Key: string; t1Val: string; t1Note: string;
+    t2Key: string; t2Val: string; t2Note: string;
+    t3Key: string; t3Val: string; t3Note: string;
+    t4Key: string; t4Val: string; t4Note: string;
+    t5Key: string; t5Val: string; t5Note: string;
+    t6Key: string; t6Val: string; t6Note: string;
+    t7Key: string; t7Val: string; t7Note: string;
+    t8Key: string; t8Val: string; t8Note: string;
+  };
+  asset?: {
+    badge: string; title: string; subtitle: string;
+    locationBadge: string; locationName: string; locationSub: string;
+    coords: string; locationRegion: string;
+    offtakerBadge: string; offtakerName: string; offtakerDesc: string;
+    s1Label: string; s1Val: string; s1Sub: string;
+    s2Label: string; s2Val: string; s2Sub: string;
+    s3Label: string; s3Val: string; s3Sub: string;
+    s4Label: string; s4Val: string; s4Sub: string;
+    s5Label: string; s5Val: string; s5Sub: string;
+    s6Label: string; s6Val: string; s6Sub: string;
+    warrantyBadge: string; w1: string; w2: string; w3: string; w4: string;
+  };
+  taxReg?: {
+    badge: string; title: string; subtitle: string;
+    conservativeBadge: string; conservativeTitle: string;
+    c1Title: string; c1Desc: string;
+    c2Title: string; c2Desc: string;
+    c3Title: string; c3Desc: string;
+    upsideBadge: string; upsideTitle: string;
+    u1Title: string; u1Desc: string;
+    u2Title: string; u2Desc: string;
+    u3Title: string; u3Desc: string;
+    u4Title: string; u4Desc: string;
+    legalBadge: string;
+    l1Title: string; l1Desc: string;
+    l2Title: string; l2Desc: string;
+    l3Title: string; l3Desc: string;
+  };
+  scenario?: {
+    badge: string; title: string; subtitle: string;
+    toggleBoth: string; toggleBase: string; toggleHigh: string;
+    chartBadge: string; chartTitle: string;
+    legendBase: string; legendHigh: string;
+    tooltipBase: string; tooltipHigh: string;
+    degradNote: string; chartNote: string;
+    baseBadge: string; baseTitle: string; baseDesc: string;
+    highBadge: string; highTitle: string; highDesc: string;
+  };
   riskMatrix?: {
     badge: string; title: string; subtitle: string; footnote: string;
     legendEpc: string; legendUnisolar: string; legendOfftaker: string;
